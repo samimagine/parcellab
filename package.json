@@ -24,9 +24,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts docs",
+    "build": "react-scripts build && npm run copy-to-docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "copy-to-docs": "rm -rf docs && cp -R build docs",
     "start-api": "node src/api/server.js"
   },
   "eslintConfig": {

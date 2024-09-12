@@ -28,7 +28,7 @@ const StatusProgress: React.FC<StatusProgressProps> = ({status}) => {
     }
 
     return (
-        <div className="flex flex-col pbs-4">
+        <div className="flex flex-col pb-4">
             <div className="bg-gray-300 h-6 w-full rounded-xl">
                 <div className="bg-indigo-900 h-6 rounded-xl" style={{width: `${progress}%`}}></div>
             </div>
