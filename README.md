@@ -78,6 +78,11 @@ cd parcellab
     - If the order exists, the app will display the details of the delivery, including delivery status, articles, and checkpoints.
     - If no match is found, an error page will show informing the user of the issue.
 
+### Step 5: EXTRA
+
+- If running the API server is not possible, it will make a fallback call to the mock data stored in the `src/api/orders.json` file.
+
+
 ## API Overview
 
 The mock API simulates basic order tracking data and is accessible at **http://localhost:3003**. Below are the key endpoints:
