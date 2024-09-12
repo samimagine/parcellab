@@ -17,9 +17,10 @@ const StatusProgress: React.FC<StatusProgressProps> = ({status}) => {
         case 'out for delivery':
         case 'new delivery date set':
         case 'failed delivery attempt':
+        case 'ready for collection':
             progress = 75;
             break;
-        case 'ready for collection':
+        case 'delivered':
             progress = 100;
             break;
         default:
