@@ -81,6 +81,7 @@ cd parcellab
 ### Step 5: EXTRA
 
 - If running the API server is not possible, it will make a fallback call to the mock data stored in the `src/api/orders.json` file.
+- It will show an error ERR_CONNECTION_REFUSED in the console if the API server is not running.
 
 
 ## API Overview
