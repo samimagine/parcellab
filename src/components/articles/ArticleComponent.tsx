@@ -11,7 +11,7 @@ interface ArticleProps {
 const Article: React.FC<ArticleProps> = ({imageUrl, imageAlt, description, articleNumber, price}) => {
     return (
         <div
-            className="flex flex-col md:flex-row items-center bg-white shadow-[4px_4px_8px_rgba(0,0,0,0.2)] mb-2 overflow-hidden rounded-bl-xl rounded-tl-xl">
+            className="flex flex-col md:flex-row items-center mb-2">
             <div className="w-full md:w-1/3">
                 <img
                     src={imageUrl}

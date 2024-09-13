@@ -22,7 +22,7 @@ const OrderStatusNote: React.FC<OrderStatusNoteProps> = ({title, message, date, 
     };
     return (
         <div className="pb-4 rounded-lg">
-            <h2 className="text-gray-950 font-bold text-lg mb-2">{title}</h2>
+            <h2 className="text-gray-950 font-bold text-lg">{title}</h2>
             <p className="text-gray-700 text-base leading-tight mb-2">{message}</p>
             <div className="flex flex-row justify-between text-gray-400 font-bold">
                 <p>{location}</p>
