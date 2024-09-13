@@ -152,6 +152,7 @@ parcellab/
 │   │   │   ├── server.js        # Express server configuration# Node.js Express server for mocked API
 │   │   ├── components/          # Reusable components (e.g., Button, Card, etc.)
 │   │   ├── pages/               # React pages (TrackingFormPage, ErrorPage, etc.)
+│   │   ├── utils/               # Utility functions
 │   │   ├── App.tsx              # Main app component with routing
 │   │   └── index.tsx            # Entry point for React
 │   └── package.json             # Frontend dependencies

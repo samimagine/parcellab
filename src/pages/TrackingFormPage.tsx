@@ -26,6 +26,7 @@ const TrackingFormPage: React.FC = () => {
         }
     };
 
+// Fetch order from local mock data when localhost fetch fails
     const fetchOrderFromLocalMock = () => {
         const foundOrder = orders.find(order => order.delivery_info.orderNo === orderNumber);
         if (!foundOrder) {
