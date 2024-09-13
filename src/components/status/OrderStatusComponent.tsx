@@ -4,7 +4,7 @@ import OrderStatusListComponent from './OrderStatusListComponent';
 import Title from '../common/TitleComponent';
 import Card from '../common/CardComponent';
 
-interface Checkpoint {
+export interface Checkpoint {
     status_details: string;
     event_timestamp: string;
     status: string;
@@ -17,7 +17,7 @@ interface OrderStatusProps {
     checkpoints: Checkpoint[];
 }
 
-const OrderStatusComponent: React.FC<OrderStatusProps> = ({status, checkpoints}) => {
+const OrderStatus: React.FC<OrderStatusProps> = ({status, checkpoints}) => {
     return (
         <Card overflowHidden={true} overflowScroll={true}>
             <Title size="small" text="Shipping updates"/>
@@ -27,4 +27,4 @@ const OrderStatusComponent: React.FC<OrderStatusProps> = ({status, checkpoints})
     );
 };
 
-export default OrderStatusComponent;
+export default OrderStatus;

@@ -13,7 +13,7 @@ const MapButton: React.FC<MapButtonProps> = ({city, country}) => {
     };
 
     return (
-        <Button text="Open in Google Maps" fullWidth={true} onClick={handleOpenMap}/>
+        <Button text="Get directions" fullWidth={true} onClick={handleOpenMap}/>
     );
 };
 

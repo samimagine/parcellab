@@ -12,7 +12,7 @@ interface ArticleListComponentProps {
     articles: ArticleData[];
 }
 
-const ArticleListComponent: React.FC<ArticleListComponentProps> = ({articles}) => {
+const ArticleList: React.FC<ArticleListComponentProps> = ({articles}) => {
     return (
         <div>
             {articles.map((article) => (
@@ -29,4 +29,4 @@ const ArticleListComponent: React.FC<ArticleListComponentProps> = ({articles}) =
     );
 };
 
-export default ArticleListComponent;
+export default ArticleList;

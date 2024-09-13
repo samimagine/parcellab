@@ -9,7 +9,7 @@ interface MapProps {
     };
 }
 
-const MapComponent: React.FC<MapProps> = ({imagePath, latestCheckpoint}) => {
+const Map: React.FC<MapProps> = ({imagePath, latestCheckpoint}) => {
     return (
         <div className="flex flex-col">
             <img src={imagePath} alt="parcelLab map" className="w-full shadow border-2 rounded-2"/>
@@ -17,4 +17,4 @@ const MapComponent: React.FC<MapProps> = ({imagePath, latestCheckpoint}) => {
     );
 };
 
-export default MapComponent;
+export default Map;

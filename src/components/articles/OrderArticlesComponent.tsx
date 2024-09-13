@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../common/TitleComponent';
-import ArticleListComponent from './ArticleListComponent';
+import ArticleList from './ArticleListComponent';
 import Card from '../common/CardComponent';
 
 interface Article {
@@ -14,13 +14,13 @@ interface ArticlesProps {
     articles: Article[];
 }
 
-const ArticlesComponent: React.FC<ArticlesProps> = ({articles}) => {
+const OrderArticles: React.FC<ArticlesProps> = ({articles}) => {
     return (
         <Card>
             <Title size="small" text="Articles"/>
-            <ArticleListComponent articles={articles}/>
+            <ArticleList articles={articles}/>
         </Card>
     );
 };
 
-export default ArticlesComponent;
+export default OrderArticles;

@@ -16,9 +16,9 @@ const LogOutButton: React.FC<LogOutButtonProps> = ({onLogOut}) => {
             onMouseLeave={() => setIsHovered(false)}
         >
             {isHovered ? (
-                <FcUnlock className="w-6 h-6"/>
+                <FcUnlock data-testid="unlock-icon" className="w-6 h-6"/>
             ) : (
-                <FcLock className="w-6 h-6"/>
+                <FcLock data-testid="lock-icon" className="w-6 h-6"/>
             )}
             <span className="ml-2 font-bold">Sign out</span>
         </button>

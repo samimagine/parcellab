@@ -4,7 +4,7 @@ import Card from '../components/common/CardComponent';
 import Input from '../components/common/InputComponent';
 import Button from '../components/common/ButtonComponent';
 import Title from "../components/common/TitleComponent";
-import orders from '../api/orders.json'; // Import the mock JSON file
+import orders from '../api/orders.json';
 
 const TrackingFormPage: React.FC = () => {
     const [orderNumber, setOrderNumber] = useState('');
@@ -54,7 +54,7 @@ const TrackingFormPage: React.FC = () => {
     };
 
     return (
-        <Card>
+        <Card height={480}>
             <img
                 src={process.env.PUBLIC_URL + '/assets/images/logo.png'}
                 alt="Track Order parcelLab logo"
@@ -62,7 +62,7 @@ const TrackingFormPage: React.FC = () => {
             />
             <header className="flex flex-col justify-center items-center mt-7">
                 <Title size="small" text="Track your order" />
-                <p className="text-center text-slate-400 p">Enter your order number and zip code combination to see the order details and shipping updates.</p>
+                <p className="text-center text-slate-400 mb-4">Enter your order number and zip code combination to see the order details and shipping updates.</p>
             </header>
             <form onSubmit={handleSubmit}>
                 <Input
@@ -75,7 +75,7 @@ const TrackingFormPage: React.FC = () => {
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value)}
                 />
-                <hr className="my-4" />
+                <hr className="my-6" />
                 <Button text="Track" type="submit" onClick={() => {}} />
             </form>
 
