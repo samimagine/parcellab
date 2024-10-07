@@ -13,6 +13,9 @@ jest.mock('./OrderStatusListComponent', () => ({ checkpoints }: { checkpoints: C
         ))}
     </div>
 ));
+jest.mock('../common/ShareLinkButtonComponent', () => ({ url }: { url: string }) => (
+    <div data-testid="share-link-button">{`Share this link: ${url}`}</div>
+));
 
 describe('OrderStatus Component', () => {
     const mockStatus = 'In Transit';
@@ -33,23 +36,31 @@ describe('OrderStatus Component', () => {
         },
     ];
 
+    const mockUrl = 'http://localhost/order-info?order=123&zip=456';
+
     test('renders Title with correct text', () => {
-        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} />);
+        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} url={mockUrl} />);
 
         expect(screen.getByText('Shipping updates')).toBeInTheDocument();
     });
 
     test('renders StatusProgress with correct status', () => {
-        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} />);
+        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} url={mockUrl} />);
 
         expect(screen.getByTestId('status-progress')).toHaveTextContent('Status Progress: In Transit');
     });
 
     test('renders OrderStatusListComponent with correct checkpoints', () => {
-        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} />);
+        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} url={mockUrl} />);
 
         expect(screen.getByTestId('order-status-list')).toBeInTheDocument();
         expect(screen.getByText('Your package is in transit.')).toBeInTheDocument();
         expect(screen.getByText('Your package has arrived at the destination.')).toBeInTheDocument();
+    });
+
+    test('renders ShareLinkButtonComponent with correct URL', () => {
+        render(<OrderStatus status={mockStatus} checkpoints={mockCheckpoints} url={mockUrl} />);
+
+        expect(screen.getByTestId('share-link-button')).toHaveTextContent(`Share this link: ${mockUrl}`);
     });
 });

@@ -14,7 +14,7 @@ interface OrderSummaryProps {
 
 const OrderSummary: React.FC<OrderSummaryProps> = ({status, statusDetails, latestCheckpoint}) => {
     return (
-        <Card noPadding={true} overflowHidden={true}>
+        <Card noPadding={true} overflowHidden={true} overflowScroll={true}>
             <div className="flex flex-col justify-between h-full">
                 <div className="p-8 mt-3">
                     <Title size="large" text={status}/>
