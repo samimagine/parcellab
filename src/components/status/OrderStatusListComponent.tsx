@@ -20,6 +20,7 @@ const OrderStatusList: React.FC<OrderStatusListProps> = ({checkpoints, limit = 3
     const toggleShowAll = () => setShowAll(!showAll);
 
     const visibleCheckpoints = showAll ? checkpoints : checkpoints.slice(0, limit);
+    console.log(visibleCheckpoints);
 
     return (
         <div>

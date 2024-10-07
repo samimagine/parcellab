@@ -3,6 +3,7 @@ import StatusProgress from './StatusProgressComponent';
 import OrderStatusListComponent from './OrderStatusListComponent';
 import Title from '../common/TitleComponent';
 import Card from '../common/CardComponent';
+import ShareLink from "../common/ShareLinkComponent";
 
 export interface Checkpoint {
     status_details: string;
@@ -15,14 +16,16 @@ export interface Checkpoint {
 interface OrderStatusProps {
     status: string;
     checkpoints: Checkpoint[];
+    url: string;
 }
 
-const OrderStatus: React.FC<OrderStatusProps> = ({status, checkpoints}) => {
+const OrderStatus: React.FC<OrderStatusProps> = ({status, checkpoints, url}) => {
     return (
         <Card overflowHidden={true} overflowScroll={true}>
             <Title size="small" text="Shipping updates"/>
             <StatusProgress status={status}/>
-            <OrderStatusListComponent checkpoints={checkpoints} limit={3}/>
+            <ShareLink url={url}/>
+            <OrderStatusListComponent checkpoints={checkpoints} limit={2}/>
         </Card>
     );
 };
